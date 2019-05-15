@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+nav{
+    background-color: blue;
+    display: flex;
+}
+#icone img{
+    width: 50px;
+}
