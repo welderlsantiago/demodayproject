@@ -21,6 +21,7 @@ from appTicket.views import main
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main),
-    path('entrar/',include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('', main, name='main'),
 ] 

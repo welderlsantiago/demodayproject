@@ -5,15 +5,32 @@ body{
                          'navbar navbar navbar aside'
                          'section section section aside'
                          'footer footer footer footer';
-    grid-template-rows: 50vh 5vh 60vh 6.8vh;
+    grid-template-rows: 50vh 5vh 60vh 8vh;
     font-family: 'Roboto', sans-serif;
 }
 nav{
     background-color: rgba(54, 54, 58, 0.752);
     display: flex;
+    align-items: center;
+    color: orange;
+}
+nav div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+nav a{
+    color: white;
+    text-decoration: none;
 }
 #icone{
     width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 #icone img{
     width: 50px;
