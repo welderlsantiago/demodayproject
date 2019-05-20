@@ -1,11 +1,38 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block title %} Showzão {% endblock %}
 
+{% block extrahead %}<link rel="stylesheet" href="{% static 'css/main.css' %}">{% endblock %}
+
 {% block content %}
-
-<p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis luctus nulla. Sed turpis nisl, suscipit id ornare nec, congue pharetra felis. Aliquam iaculis congue lorem ac ultricies. Proin facilisis augue venenatis, tempus sapien vitae, aliquam mi. Nullam facilisis eleifend eros, eu consectetur sem. Sed sed mi vitae neque ultrices pulvinar. Integer tincidunt, ex eget scelerisque ultricies, nisl est viverra nisi, at interdum magna enim molestie justo.
-</p>
-
+<section>
+        <div>
+                <div class="imagemBanda">
+                        <img src="https://i.pinimg.com/originals/5a/09/3d/5a093d80da86acd9d6684b6174f8e646.jpg"
+                                alt="Red Hot Chilli Peppers no Rock in Rio">
+                        <p>
+                                <div>
+                                        <h3><a href=""> Red Hot Chilli Peppers no Rock in Rio!</a></h3>
+                                        Pela sexta vez, Red Hot Chili Peppers estará no Rock in Rio, no dia 3 de outubro. Com seu som cheio de
+                                        atitude e
+                                        ampla diversidade musical, a banda americana, que tem presença de palco e energia inigualáveis, promete
+                                        ser mais
+                                        uma vez surpreendente. A mistura de punk, funk e letras intensas fez com que o grupo alcançasse o
+                                        sucesso
+                                        absoluto atual.
+                                </div>
+                        </p>
+                </div>
+                <div class="imagemBanda">
+                                <p>
+                                <div>
+                                        <h3><a href=""> Paul McCartney em São Paulo!</a></h3>
+                                        Paul McCartney se apresentará na noite desta terça-feira (26) no Allianz Parque, em São Paulo, com a turnê The Freshen Up Tour. Em sua oitava turnê pelo Brasil, o músico mostrará um repertório recheado de músicas antigas, incluindo canções dos The Beatles e da banda Wings. 
+                                </div>
+                                </p>
+                                <img src="https://img.r7.com/images/paul-mccartney-26032019212629132"
+                                        alt="Red Hot Chilli Peppers no Rock in Rio">
+                        </div>
+        </div>
+</section>
 {% endblock %}

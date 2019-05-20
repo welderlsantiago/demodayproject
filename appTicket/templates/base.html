@@ -25,10 +25,10 @@
             <div>
                 {% if user.is_authenticated %}
                 <p>Olá  {{ user.username }} </p>
-                <p><a href="{% url 'logout' %}">SAIR</a></p>
+                <p><a href="{% url 'logout' %}"><span>SAIR</span></a></p>
                 {% else %}
                 <p>Você não está logado:</p>
-                <a href="{% url 'login' %}">ENTRAR</a>
+                <a href="{% url 'login' %}"> <span>ENTRAR</span></a>
                 {% endif %}
             </div>
         </nav>

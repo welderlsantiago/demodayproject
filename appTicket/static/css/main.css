@@ -1,0 +1,36 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+section a {
+    text-decoration: none;
+
+}
+section div{
+    width: 70%;
+}
+span{
+    font-size: 22pt;
+}
+.imagemBanda{
+    height: 50%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    /* 
+    border-radius: 20px 20px 20px 20px; */
+}
+.imagemBanda img{
+    margin-top: 16px;
+    width: 38%;
+    border-radius: 20px 20px 20px 20px;
+}
+.imagemBanda div{
+    width: 58%;
+}
+body{
+    grid-template-rows: 50vh 90vh 8vh;
+}
