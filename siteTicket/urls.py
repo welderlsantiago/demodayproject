@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 """ import das views do app para o projeto """
-from appTicket.views import main
+from appTicket.views import main, shows
 
 
 urlpatterns = [
@@ -24,4 +24,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('', main, name='main'),
-] 
+    path('shows/', shows, name='shows')
+]

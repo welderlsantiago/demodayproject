@@ -6,7 +6,12 @@
 
 {% block content %}
 <section>
-        <div>
+         <div>
+             <h1>Showzão te leva para os maiores shows do Brasil!</h1>   
+             <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable En</p>
+             <p>Já pensou em ir em algum dos shows abaixo?</p>
+         </div>
+        <div class="showsContainer">
                 <div class="imagemBanda">
                         <img src="https://i.pinimg.com/originals/5a/09/3d/5a093d80da86acd9d6684b6174f8e646.jpg"
                                 alt="Red Hot Chilli Peppers no Rock in Rio">
@@ -33,6 +38,19 @@
                                 <img src="https://img.r7.com/images/paul-mccartney-26032019212629132"
                                         alt="Red Hot Chilli Peppers no Rock in Rio">
                         </div>
+        </div>
+             <h1>Ajudando o cenário músical e ainda por cima curtindo um ótimo som?</h1>
+        <div>
+                <h2>Quer participar com sua banda?</h2>
+                <p>Preecha o formulário abaixo e sua banda será avaliada pela nossa equipe:</p>
+                <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Vejam minha BANDA</button>
+                        {% if msg %}
+                                <h2>{{ msg }}</h2>
+                        {% endif %}
+                </form>
         </div>
 </section>
 {% endblock %}
