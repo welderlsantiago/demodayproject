@@ -1,0 +1,19 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: orange;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card p{
+    background-color: white;
+    width: 90%;
+    border-radius: 3px 3px 3px 3px;
+}

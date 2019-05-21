@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %} Shows {% endblock %}
-
+{% block extrahead %}<link rel="stylesheet" href="{% static 'css/shows.css' %}">{% endblock %}
 {% block content %}
+<section>
+    {% for artista in art %}
+    <div class="card">
+        <div>
+            <img src="{{ artistas.foto.url }}" alt="">
+        </div>
+        <div>
+        <h2>{{ artista.nome }}</h2>
+        <p>{{ artista.genero }}</p>
+        <p>{{ artista.estado }}</p>
+        <p>{{ artista.biografia }}</p>
+        <span>Compareçam em nosso Show:</span>
+        <p>{{ artista.data }}</p>
+        <p>{{ artista.foto }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
 
 {% endblock %}

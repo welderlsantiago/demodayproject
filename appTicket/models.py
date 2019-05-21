@@ -15,3 +15,21 @@ class Banda(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class GrupoBandas(models.Model):
+    estado_opcoes = [
+        ["Acre", 'Acre'],
+        ["Amapá", 'Amapá'],
+        ["Amazonas",'Amazonas'],
+    ]
+
+    nome = models.CharField(max_length=100)
+    genero = models.CharField(max_length=100)
+    data = models.DateField()
+    estado = models.CharField(max_length=15, choices= estado_opcoes)
+    biografia = models.CharField(max_length=300)
+    foto = models.ImageField(upload_to='', null=True)
+
+    def __str__(self):
+        return self.nome

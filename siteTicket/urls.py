@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 """ import das views do app para o projeto """
 from appTicket.views import main, shows
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
@@ -24,5 +26,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('', main, name='main'),
-    path('shows/', shows, name='shows')
-]
+    path('shows/', shows, name='GpShows')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

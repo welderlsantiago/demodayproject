@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from appTicket.forms import BandaForm
+from appTicket.forms import BandaForm, GrupoBandasForm
+from appTicket.models import GrupoBandas
 
 # Create your views here.
 
@@ -20,4 +21,8 @@ def main(request):
     return render(request, 'main.html', contexto)
 
 def shows(request):
-    return render(request,'shows.hmtl')
+    artistas = GrupoBandas.objects.all()
+    contexto = {
+        'art' : artistas
+    }
+    return render(request,'shows.html', contexto)
