@@ -1,7 +1,7 @@
 section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
 }
@@ -10,12 +10,13 @@ section a {
 
 }
 section div{
-    background-color: white;
-    width: 70%;
-    text-align: 
+    width: 100%;
+    text-align: center;
+    height: 20.5%;
 }
 .showsContainer{
-    width: 70%;
+    height: 30%;
+    width: 95%;
 }
 span{
     font-size: 22pt;
@@ -38,5 +39,53 @@ span{
     width: 58%;
 }
 body{
-    grid-template-rows: 50vh 170vh 8vh;
+    grid-template-rows: 50vh 220vh 8vh;
+}
+#anuncio{
+    height: 23%;
+}
+#formBanda{
+    background-color: orange;
+    border-radius: 15px 15px 15px 15px ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;    
+    width: 95%;
+}
+#formBanda input{
+    border-radius: 5px 5px 5px 5px ;
+}
+#formBanda h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#formBanda p{
+    margin-top: 0px;
+}
+#formBanda button{
+    border: none;
+    background-color: rgb(43, 102, 230);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16pt;
+    border-radius: 5px 5px 5px 5px ;
+}
+#formBanda div{
+    background-color: orange;
+    width: 100%;
+    border-radius: 15px 15px 15px 15px ;
+
+}
+#formBanda form{
+    padding-top: 4px;
+}
+h1{
+    font-family: 'Francois One', sans-serif;
+    color: orange;
+}
+h2{
+    font-family: 'Francois One', sans-serif;
+}
+
+@media (max-width:768px){
+    
 }

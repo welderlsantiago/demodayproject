@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'javascript/script.js' %}" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Link pra usar CSS em cada página -->
     {% block extrahead %}{% endblock %}
@@ -15,14 +16,21 @@
 </head>
 <body>
     <header>
+        <aside>
+            <div>
+                <section class="eixoDir"></section>
+                <section class="eixoSome"></section>
+                <section class="eixoCont"></section>
+            </div>
+        </aside>
         <nav>
             <div id="icone">
-                <a href="{% url 'main' %}"> <img src="https://image.flaticon.com/icons/svg/25/25219.svg" alt="Logo com imagem de ticket"></a>
                 <a href="{% url 'main' %}">Início</a>
                 <a href="{% url 'GpShows' %}">Shows</a>
                 <a href="{% url 'cadastro' %}">Cadastre-se AGORA!</a>
             </div>
-            <div>
+            <div >
+                <div id="login">
                 {% if user.is_authenticated %}
                 <p>Olá  {{ user.username }} </p>
                 <p><a href="{% url 'logout' %}"><span>SAIR</span></a></p>
@@ -30,6 +38,7 @@
                 <p>Você não está logado:</p>
                 <a href="{% url 'login' %}"> <span>ENTRAR</span></a>
                 {% endif %}
+                </div>
             </div>
         </nav>
     </header>
@@ -39,9 +48,9 @@
     </main>
     <footer>
         <div>
-            <a href=""><img src="https://image.flaticon.com/icons/svg/69/69366.svg" alt="Instagram"></a>
-            <a href=""><img src="https://image.flaticon.com/icons/svg/69/69407.svg" alt="Facebook"></a>
-            <a href=""><img src="https://image.flaticon.com/icons/svg/69/69480.svg" alt="Twitter"></a>
+            <a href="" target="_blank"><img src="https://image.flaticon.com/icons/svg/69/69366.svg" alt="Instagram"></a>
+            <a href="" target="_blank"><img src="https://image.flaticon.com/icons/svg/69/69407.svg" alt="Facebook"></a>
+            <a href="" target="_blank"><img src="https://image.flaticon.com/icons/svg/69/69480.svg" alt="Twitter"></a>
         </div>
     </footer>
 </body>

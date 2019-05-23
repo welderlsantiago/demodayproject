@@ -1,22 +1,30 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %} Shows {% endblock %}
-{% block extrahead %}<link rel="stylesheet" href="{% static 'css/shows.css' %}">{% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/shows.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+
+{% endblock %}
 {% block content %}
 <section>
+    <h1>SHOWS DISPONIVEIS NO MOMENTO</h1>
     {% for artista in art %}
     <div class="card">
         <div>
-            <img src="{{ artistas.foto.url }}" alt="">
+            <img src="../../media/national-sleep-well-beast-capa.jpg" alt="Imagem genérica">
         </div>
         <div>
-        <h2>{{ artista.nome }}</h2>
-        <p>{{ artista.genero }}</p>
-        <p>{{ artista.estado }}</p>
-        <p>{{ artista.biografia }}</p>
-        <span>Compareçam em nosso Show:</span>
-        <p>{{ artista.data }}</p>
-        <p>{{ artista.foto }}</p>
+            <h2>{{ artista.nome }}</h2>
+            <span>Estilo Musical</span>
+            <p>{{ artista.genero }}</p>
+            <span>Local do Show:</span>
+            <p>{{ artista.estado }}</p>
+            <span>Nossa história:</span>
+            <p>{{ artista.biografia }}</p>
+            <span>Compareçam em nosso Show:</span>
+            <p>{{ artista.data }}</p>
+            <p>{{ artista.instance.foto }}</p>
         </div>
     </div>
     {% endfor %}

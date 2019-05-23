@@ -2,53 +2,86 @@
 {% load staticfiles %}
 {% block title %} Showzão {% endblock %}
 
-{% block extrahead %}<link rel="stylesheet" href="{% static 'css/main.css' %}">{% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 <section>
-         <div>
-             <h1>Showzão te leva para os maiores shows do Brasil!</h1>   
-             <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable En</p>
-             <p>Já pensou em ir em algum dos shows abaixo?</p>
-         </div>
+        <div>
+                <h1>SHOWZÃO TE LEVA PARA OS MAIORES SHOWS DO BRASIL!</h1>
+                <h2>O QUE É SHOWZÃO?</h2>
+                <p>
+                        Showzão é um provedor de shows de cantores, grupos e bandas independentes que busca democratizar
+                        o acesso a eventos musicais. </p>
+                <h3>Já pensou em ir em algum dos shows abaixo?</h3>
+        </div>
         <div class="showsContainer">
                 <div class="imagemBanda">
                         <img src="https://i.pinimg.com/originals/5a/09/3d/5a093d80da86acd9d6684b6174f8e646.jpg"
                                 alt="Red Hot Chilli Peppers no Rock in Rio">
                         <p>
                                 <div>
-                                        <h3><a href=""> Red Hot Chilli Peppers no Rock in Rio!</a></h3>
-                                        Pela sexta vez, Red Hot Chili Peppers estará no Rock in Rio, no dia 3 de outubro. Com seu som cheio de
+                                        <h3><a href="http://rockinrio.com/rio/pt-BR/line-up/red-hot-chili-peppers"
+                                                        target="_blank"> Red Hot Chilli Peppers no Rock in Rio! </a>
+                                        </h3>
+                                        Pela sexta vez, Red Hot Chili Peppers estará no Rock in Rio, no dia 3 de
+                                        outubro. Com seu som cheio de
                                         atitude e
-                                        ampla diversidade musical, a banda americana, que tem presença de palco e energia inigualáveis, promete
+                                        ampla diversidade musical, a banda americana, que tem presença de palco e
+                                        energia inigualáveis, promete
                                         ser mais
-                                        uma vez surpreendente. A mistura de punk, funk e letras intensas fez com que o grupo alcançasse o
+                                        uma vez surpreendente. A mistura de punk, funk e letras intensas fez com que o
+                                        grupo alcançasse o
                                         sucesso
                                         absoluto atual.
                                 </div>
                         </p>
                 </div>
                 <div class="imagemBanda">
-                                <p>
+                        <p>
                                 <div>
-                                        <h3><a href=""> Paul McCartney em São Paulo!</a></h3>
-                                        Paul McCartney se apresentará na noite desta terça-feira (26) no Allianz Parque, em São Paulo, com a turnê The Freshen Up Tour. Em sua oitava turnê pelo Brasil, o músico mostrará um repertório recheado de músicas antigas, incluindo canções dos The Beatles e da banda Wings. 
+                                        <h3><a href="http://www.tenhomaisdiscosqueamigos.com/2019/03/27/paul-mccartney-show-sp-2019/"
+                                                        target="_blank"> Paul McCartney em São Paulo!</a></h3>
+                                        Paul McCartney se apresentará na noite desta terça-feira (26) no Allianz Parque,
+                                        em São Paulo, com a turnê The Freshen Up Tour. Em sua oitava turnê pelo Brasil,
+                                        o músico mostrará um repertório recheado de músicas antigas, incluindo canções
+                                        dos The Beatles e da banda Wings.
                                 </div>
-                                </p>
-                                <img src="https://img.r7.com/images/paul-mccartney-26032019212629132"
-                                        alt="Red Hot Chilli Peppers no Rock in Rio">
-                        </div>
+                        </p>
+                        <img src="https://img.r7.com/images/paul-mccartney-26032019212629132"
+                                alt="Red Hot Chilli Peppers no Rock in Rio">
+                </div>
         </div>
-             <h1>Ajudando o cenário músical e ainda por cima curtindo um ótimo som?</h1>
-        <div>
-                <h2>Quer participar com sua banda?</h2>
-                <p>Preecha o formulário abaixo e sua banda será avaliada pela nossa equipe:</p>
+        <div id="anuncio">
+                <h1>Ajudando o cenário músical e ainda por cima curtindo um ótimo som?</h1>
+                <h2>COMO FAZ?</h2>
+                <p>
+                        Assine Showzão por R$ 34,90 para ter acesso a 4 shows mensais de artistas independentes; cada
+                        show que você vai gera 5 pontos que podem ser trocados por shows megas internacionais!
+                </p>
+                <p>
+                        Com o Showzão, você tem acesso a 4 shows mensais de artistas independentes onde cada show que
+                        você vai gera 5 pontos que podem ser trocados por um show grande.
+                        Além de você poder conseguir o ingresso para um show grande antes de todo mundo e por meio de
+                        troca de pontos; você valoriza o artista independente prestigiando seu trabalho contribuindo
+                        diretamente para o seu reconhecimento e financeiro.
+                </p>
+        </div>
+
+        <div id="formBanda">
+                <div>
+                        <h2>Quer participar com sua banda?</h2>
+                        <p>Preecha o formulário abaixo e sua banda será avaliada pela nossa equipe:</p>
+                </div>
+
                 <form method="POST">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit">Vejam minha BANDA</button>
                         {% if msg %}
-                                <h2>{{ msg }}</h2>
+                        <h2>{{ msg }}</h2>
                         {% endif %}
                 </form>
         </div>
